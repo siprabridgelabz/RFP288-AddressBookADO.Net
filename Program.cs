@@ -18,8 +18,10 @@ namespace AddressBookADOProblem
                 AddressBook addressBook = new AddressBook();
                 Console.WriteLine("1-Insert Data");
                 Console.WriteLine("2-Crate All Data from DataBase");
+                Console.WriteLine("3-Update Data In DataBase");
                 Console.WriteLine("select above option");
-                int option=Convert.ToInt32(Console.ReadLine());
+
+                int option =Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
@@ -27,6 +29,15 @@ namespace AddressBookADOProblem
                         break;
                     case 2:
                         addressBook.GetAllDataFrom_DataBase();
+                        break;
+                    case 3:
+                        Contact contacts = new Contact()
+                        {
+                            FirstName = "Priya",
+                            LastName = "Mishra",
+                            City = "UK"
+                        };
+                        addressBook.UpdateDataInDB(contacts);
                         break;
                 }
 
