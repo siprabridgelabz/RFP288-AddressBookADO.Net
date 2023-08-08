@@ -17,12 +17,16 @@ namespace AddressBookADOProblem
                     EmailID = "sipra123@" };
                 AddressBook addressBook = new AddressBook();
                 Console.WriteLine("1-Insert Data");
+                Console.WriteLine("2-Crate All Data from DataBase");
                 Console.WriteLine("select above option");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         addressBook.AddNewContactInDatabase(contact);
+                        break;
+                    case 2:
+                        addressBook.GetAllDataFrom_DataBase();
                         break;
                 }
 

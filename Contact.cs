@@ -14,7 +14,7 @@ namespace AddressBookADOProblem
         public string City { get; set; }
         public string State { get; set; }
         public int Zip { get; set; }
-        public int PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
         public string EmailID { get; set; }
     }
 }
